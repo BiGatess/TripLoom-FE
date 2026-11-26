@@ -1,0 +1,1045 @@
+{
+  "project": "TripLoom Frontend",
+  "designSourceDir": "C:\\Users\\Bi\\Downloads\\GIAO DIỆN",
+  "generatedAt": "2026-11-25",
+  "notes": "Ánh xạ đầy đủ 46 hạng mục thiết kế (C00 + 45 màn hình/modal/drawer/trạng thái) từ bộ thiết kế Google Stitch và tài liệu nghiệp vụ TripLoom. Các modal/drawer (U06, U07, U09, A15, A16) được gắn vào trang cha thay vì tạo route tách biệt.",
+  "screens": [
+    {
+      "code": "C00",
+      "name": "Hệ thống thiết kế và thư viện thành phần",
+      "designPath": "c00_h_th_ng_thi_t_k_th_nh_ph_n/code.html",
+      "type": "design-system",
+      "route": null,
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "shared",
+      "sharedComponents": [
+        "Logo",
+        "StatusBadge",
+        "Toast",
+        "Modal",
+        "Pagination",
+        "EmptyErrorState",
+        "DestinationCard",
+        "EmailCodeForm",
+        "PermissionMatrix"
+      ],
+      "services": [],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "P01",
+      "name": "Trang chủ",
+      "designPath": "p01_trang_ch_publicshell/code.html",
+      "type": "page",
+      "route": "/",
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "destinations",
+      "sharedComponents": [
+        "PublicShell",
+        "DestinationCard",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "destinationsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "P02",
+      "name": "Tìm kiếm và lọc địa điểm",
+      "designPath": "p02_t_m_ki_m_l_c_a_i_m/code.html",
+      "type": "page",
+      "route": "/dia-diem",
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "destinations",
+      "sharedComponents": [
+        "PublicShell",
+        "DestinationCard",
+        "Pagination",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "destinationsService",
+        "favoritesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "P03",
+      "name": "Chi tiết địa điểm và đánh giá",
+      "designPath": "p03_chi_ti_t_a_i_m_nh_gi/code.html",
+      "type": "page",
+      "route": "/dia-diem/:id",
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "destinations",
+      "sharedComponents": [
+        "PublicShell",
+        "StatusBadge",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "destinationsService",
+        "servicesService",
+        "favoritesService",
+        "reviewsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "P04",
+      "name": "Chi tiết dịch vụ có thể đặt",
+      "designPath": "p04_chi_ti_t_d_ch_v_c_th_t/code.html",
+      "type": "page",
+      "route": "/dich-vu/:id",
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "services",
+      "sharedComponents": [
+        "PublicShell",
+        "StatusBadge",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "servicesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "T01",
+      "name": "Đăng nhập",
+      "designPath": "t01_ng_nh_p/code.html",
+      "type": "page",
+      "route": "/dang-nhap",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "Logo"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "T02",
+      "name": "Đăng ký tài khoản",
+      "designPath": "t02_ng_k_t_i_kho_n/code.html",
+      "type": "page",
+      "route": "/dang-ky",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "Logo"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "T03",
+      "name": "Xác thực email đăng ký",
+      "designPath": "t03_x_c_th_c_email_ng_k/code.html",
+      "type": "page",
+      "route": "/dang-ky/xac-thuc",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "EmailCodeForm"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "T04",
+      "name": "Yêu cầu mã quên mật khẩu",
+      "designPath": "t04_y_u_c_u_m_qu_n_m_t_kh_u/code.html",
+      "type": "page",
+      "route": "/quen-mat-khau",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "Logo"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "T05",
+      "name": "Xác thực mã và đặt mật khẩu mới",
+      "designPath": "t05_x_c_th_c_m_t_m_t_kh_u_m_i/code.html",
+      "type": "page",
+      "route": "/quen-mat-khau/dat-lai",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "EmailCodeForm"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "T06",
+      "name": "Kích hoạt tài khoản nhân viên",
+      "designPath": "t06_k_ch_ho_t_t_i_kho_n_nh_n_vi_n/code.html",
+      "type": "page",
+      "route": "/kich-hoat-nhan-vien",
+      "roles": [
+        "PUBLIC"
+      ],
+      "feature": "auth",
+      "sharedComponents": [
+        "PublicShell",
+        "EmailCodeForm"
+      ],
+      "services": [
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U01",
+      "name": "Không gian cá nhân — Tổng quan",
+      "designPath": "u01_kh_ng_gian_c_nh_n_membershell/code.html",
+      "type": "page",
+      "route": "/ca-nhan",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "profile",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "itinerariesService",
+        "bookingsService",
+        "profileService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "U02",
+      "name": "Hồ sơ cá nhân",
+      "designPath": "u02_h_s_s_th_ch_du_l_ch/code.html",
+      "type": "page",
+      "route": "/ca-nhan/ho-so",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "profile",
+      "sharedComponents": [
+        "MemberShell",
+        "Toast"
+      ],
+      "services": [
+        "profileService",
+        "authService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U03",
+      "name": "Biểu mẫu lập chuyến đi theo bước",
+      "designPath": "u03_bi_u_m_u_l_p_chuy_n_i_theo_b_c/code.html",
+      "type": "page",
+      "route": "/lap-lich-trinh",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "trip-planning",
+      "sharedComponents": [
+        "MemberShell"
+      ],
+      "services": [
+        "tripPlanningService",
+        "profileService",
+        "destinationsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U04",
+      "name": "Danh sách đề xuất cá nhân hóa",
+      "designPath": "u04_danh_s_ch_xu_t_c_nh_n_h_a/code.html",
+      "type": "page",
+      "route": "/de-xuat",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "trip-planning",
+      "sharedComponents": [
+        "MemberShell",
+        "DestinationCard",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "tripPlanningService",
+        "itinerariesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U05",
+      "name": "Lịch trình theo ngày — bản nháp và đã lưu",
+      "designPath": "u05_l_ch_tr_nh_theo_ng_y_k_m_u06_drawer_u07_modal/code.html",
+      "type": "page",
+      "route": "/lich-trinh/:id và /lich-trinh/nhap/:draftId",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "itineraries",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "Modal",
+        "Toast"
+      ],
+      "services": [
+        "itinerariesService",
+        "destinationsService",
+        "chatService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "U06",
+      "name": "Thêm/sửa hoạt động thủ công",
+      "designPath": "u05_l_ch_tr_nh_theo_ng_y_k_m_u06_drawer_u07_modal/code.html",
+      "type": "drawer",
+      "route": null,
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "itineraries",
+      "sharedComponents": [
+        "Modal"
+      ],
+      "services": [
+        "itinerariesService",
+        "destinationsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U07",
+      "name": "Tái tạo một phần bằng AI và xem trước",
+      "designPath": "u05_l_ch_tr_nh_theo_ng_y_k_m_u06_drawer_u07_modal/code.html",
+      "type": "modal",
+      "route": null,
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "itineraries",
+      "sharedComponents": [
+        "Modal"
+      ],
+      "services": [
+        "itinerariesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "U08",
+      "name": "Lịch sử lịch trình",
+      "designPath": "u08_l_ch_s_l_ch_tr_nh_k_m_u09_modal/code.html",
+      "type": "page",
+      "route": "/lich-trinh-cua-toi",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "itineraries",
+      "sharedComponents": [
+        "MemberShell",
+        "Pagination",
+        "Modal",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "itinerariesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U09",
+      "name": "Sao chép và xác nhận xóa lịch trình",
+      "designPath": "u08_l_ch_s_l_ch_tr_nh_k_m_u09_modal/code.html",
+      "type": "modal",
+      "route": null,
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "itineraries",
+      "sharedComponents": [
+        "Modal"
+      ],
+      "services": [
+        "itinerariesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U10",
+      "name": "Chat AI và lịch sử hội thoại",
+      "designPath": "u10_chat_ai_l_ch_s_h_i_tho_i/code.html",
+      "type": "page",
+      "route": "/chat và /chat/:conversationId",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "chat",
+      "sharedComponents": [
+        "MemberShell",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "chatService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U11",
+      "name": "Địa điểm yêu thích",
+      "designPath": "u11_a_i_m_y_u_th_ch/code.html",
+      "type": "page",
+      "route": "/yeu-thich",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "favorites",
+      "sharedComponents": [
+        "MemberShell",
+        "DestinationCard",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "favoritesService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "U12",
+      "name": "Đánh giá của tôi",
+      "designPath": "u12_nh_gi_c_a_t_i/code.html",
+      "type": "page",
+      "route": "/danh-gia-cua-toi",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "reviews",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "Modal",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "reviewsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "B01",
+      "name": "Xác nhận đặt dịch vụ",
+      "designPath": "b01_x_c_nh_n_t_d_ch_v/code.html",
+      "type": "page",
+      "route": "/dat-dich-vu/:serviceId",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "bookings",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge"
+      ],
+      "services": [
+        "servicesService",
+        "bookingsService",
+        "profileService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "B02",
+      "name": "Danh sách đơn dịch vụ của tôi",
+      "designPath": "b02_danh_s_ch_n_d_ch_v_c_a_t_i/code.html",
+      "type": "page",
+      "route": "/don-dich-vu",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "bookings",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "Pagination",
+        "Modal",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "bookingsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "B03",
+      "name": "Chi tiết đơn dịch vụ",
+      "designPath": "b03_chi_ti_t_n_d_ch_v/code.html",
+      "type": "page",
+      "route": "/don-dich-vu/:bookingId",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "bookings",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "Modal"
+      ],
+      "services": [
+        "bookingsService",
+        "paymentsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "B04",
+      "name": "Thanh toán QR SePay",
+      "designPath": "b04_thanh_to_n_qr_sepay/code.html",
+      "type": "page",
+      "route": "/thanh-toan/:bookingId",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "payments",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge",
+        "Toast"
+      ],
+      "services": [
+        "paymentsService",
+        "bookingsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "B05",
+      "name": "Kết quả thanh toán",
+      "designPath": "b05_k_t_qu_thanh_to_n/code.html",
+      "type": "page",
+      "route": "/thanh-toan/:bookingId/ket-qua",
+      "roles": [
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "payments",
+      "sharedComponents": [
+        "MemberShell",
+        "StatusBadge"
+      ],
+      "services": [
+        "paymentsService",
+        "bookingsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A01",
+      "name": "Tổng quan quản trị",
+      "designPath": "a01_t_ng_quan_qu_n_tr_backofficeshell/code.html",
+      "type": "page",
+      "route": "/quan-tri",
+      "roles": [
+        "ADMIN",
+        "STAFF"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "EmptyErrorState"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "A02",
+      "name": "Quản lý danh mục du lịch",
+      "designPath": "a02_qu_n_l_danh_m_c_du_l_ch/code.html",
+      "type": "page",
+      "route": "/quan-tri/danh-muc",
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Modal",
+        "Pagination"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A03",
+      "name": "Danh sách địa điểm quản trị",
+      "designPath": "a03_danh_s_ch_a_i_m_qu_n_tr/code.html",
+      "type": "page",
+      "route": "/quan-tri/dia-diem",
+      "roles": [
+        "ADMIN",
+        "STAFF_DESTINATION"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Pagination",
+        "Modal"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A04",
+      "name": "Thêm/sửa địa điểm",
+      "designPath": "a04_th_m_s_a_a_i_m/code.html",
+      "type": "page",
+      "route": "/quan-tri/dia-diem/them và /quan-tri/dia-diem/:id/sua",
+      "roles": [
+        "ADMIN",
+        "STAFF_DESTINATION"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "Toast"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A05",
+      "name": "Danh sách dịch vụ quản trị",
+      "designPath": "a05_danh_s_ch_d_ch_v_qu_n_tr/code.html",
+      "type": "page",
+      "route": "/quan-tri/dich-vu",
+      "roles": [
+        "ADMIN",
+        "STAFF_SERVICE"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Pagination",
+        "Modal"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A06",
+      "name": "Thêm/sửa dịch vụ",
+      "designPath": "a06_th_m_s_a_d_ch_v/code.html",
+      "type": "page",
+      "route": "/quan-tri/dich-vu/them và /quan-tri/dich-vu/:id/sua",
+      "roles": [
+        "ADMIN",
+        "STAFF_SERVICE"
+      ],
+      "feature": "admin-catalog",
+      "sharedComponents": [
+        "BackofficeShell",
+        "Toast"
+      ],
+      "services": [
+        "adminCatalogService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A07",
+      "name": "Danh sách booking nội bộ",
+      "designPath": "a07_danh_s_ch_booking_n_i_b/code.html",
+      "type": "page",
+      "route": "/quan-tri/booking",
+      "roles": [
+        "ADMIN",
+        "STAFF_BOOKING"
+      ],
+      "feature": "bookings",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Pagination"
+      ],
+      "services": [
+        "bookingsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A08",
+      "name": "Chi tiết và hỗ trợ booking",
+      "designPath": "a08_chi_ti_t_h_tr_booking/code.html",
+      "type": "page",
+      "route": "/quan-tri/booking/:id",
+      "roles": [
+        "ADMIN",
+        "STAFF_BOOKING"
+      ],
+      "feature": "bookings",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Modal"
+      ],
+      "services": [
+        "bookingsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A09",
+      "name": "Kiểm duyệt đánh giá",
+      "designPath": "a09_ki_m_duy_t_nh_gi/code.html",
+      "type": "page",
+      "route": "/quan-tri/danh-gia",
+      "roles": [
+        "ADMIN",
+        "STAFF_REVIEW"
+      ],
+      "feature": "reviews",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Modal",
+        "Pagination"
+      ],
+      "services": [
+        "reviewsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A10",
+      "name": "Thanh toán và các giao dịch SePay",
+      "designPath": "a10_thanh_to_n_giao_d_ch_sepay/code.html",
+      "type": "page",
+      "route": "/quan-tri/thanh-toan",
+      "roles": [
+        "ADMIN",
+        "STAFF_PAYMENT_VIEW"
+      ],
+      "feature": "payments",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Pagination"
+      ],
+      "services": [
+        "paymentsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "A11",
+      "name": "Chi tiết giao dịch và đối soát",
+      "designPath": "a11_chi_ti_t_giao_d_ch_i_so_t/code.html",
+      "type": "page",
+      "route": "/quan-tri/giao-dich/:eventId",
+      "roles": [
+        "ADMIN",
+        "STAFF_PAYMENT_VIEW"
+      ],
+      "feature": "payments",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Modal"
+      ],
+      "services": [
+        "paymentsService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "A12",
+      "name": "Danh sách nhân viên",
+      "designPath": "a12_danh_s_ch_nh_n_vi_n/code.html",
+      "type": "page",
+      "route": "/quan-tri/nhan-vien",
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Pagination",
+        "Modal"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "A13",
+      "name": "Thêm nhân viên",
+      "designPath": "a13_th_m_nh_n_vi_n/code.html",
+      "type": "page",
+      "route": "/quan-tri/nhan-vien/them",
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "BackofficeShell",
+        "PermissionMatrix"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A14",
+      "name": "Chi tiết và cập nhật nhân viên",
+      "designPath": "a14_chi_ti_t_nh_n_vi_n_k_m_a15_quy_n_a16_kh_a_m/code.html",
+      "type": "page",
+      "route": "/quan-tri/nhan-vien/:id",
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "BackofficeShell",
+        "StatusBadge",
+        "Modal",
+        "PermissionMatrix"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    },
+    {
+      "code": "A15",
+      "name": "Cấp và thu hồi nhóm quyền",
+      "designPath": "a14_chi_ti_t_nh_n_vi_n_k_m_a15_quy_n_a16_kh_a_m/code.html",
+      "type": "modal",
+      "route": null,
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "Modal",
+        "PermissionMatrix"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A16",
+      "name": "Khóa và mở khóa nhân viên",
+      "designPath": "a14_chi_ti_t_nh_n_vi_n_k_m_a15_quy_n_a16_kh_a_m/code.html",
+      "type": "modal",
+      "route": null,
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "Modal"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "A17",
+      "name": "Nhật ký và chi tiết thay đổi",
+      "designPath": "a17_nh_t_k_chi_ti_t_thay_i/code.html",
+      "type": "page",
+      "route": "/quan-tri/nhat-ky",
+      "roles": [
+        "ADMIN"
+      ],
+      "feature": "staff",
+      "sharedComponents": [
+        "BackofficeShell",
+        "Pagination",
+        "Modal"
+      ],
+      "services": [
+        "staffService"
+      ],
+      "implementationStatus": "implemented",
+      "verificationStatus": "unit_and_build_verified"
+    },
+    {
+      "code": "X01",
+      "name": "Lỗi truy cập, tài nguyên và phiên",
+      "designPath": "x01_l_i_truy_c_p_t_i_nguy_n_phi_n/code.html",
+      "type": "state",
+      "route": "/403 và /404",
+      "roles": [
+        "PUBLIC",
+        "MEMBER",
+        "STAFF",
+        "ADMIN"
+      ],
+      "feature": "system",
+      "sharedComponents": [
+        "PublicShell",
+        "MemberShell",
+        "BackofficeShell"
+      ],
+      "services": [],
+      "implementationStatus": "implemented",
+      "verificationStatus": "browser_and_build_verified"
+    }
+  ],
+  "lastVerifiedAt": "2026-11-25"
+}
