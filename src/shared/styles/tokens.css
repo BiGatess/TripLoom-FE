@@ -1,0 +1,31 @@
+:root {
+  --tl-primary: #0F766E;
+  --tl-on-primary: #FFFFFF;
+  --tl-primary-hover: #115E59;
+  --tl-primary-light: #E6F5F2;
+  --tl-background: #F8FAFC;
+  --tl-surface: #FFFFFF;
+  --tl-surface-muted: #F1F5F9;
+  --tl-text-primary: #0F172A;
+  --tl-text-secondary: #475569;
+  --tl-border: #CBD5E1;
+
+  --tl-success: #166534;
+  --tl-success-bg: #DCFCE7;
+  --tl-warning: #92400E;
+  --tl-warning-bg: #FEF3C7;
+  --tl-error: #B91C1C;
+  --tl-error-bg: #FEE2E2;
+  --tl-info: #1D4ED8;
+  --tl-info-bg: #DBEAFE;
+
+  --tl-radius-sm: 8px;
+  --tl-radius-default: 10px;
+  --tl-radius-md: 12px;
+  --tl-radius-lg: 16px;
+  --tl-radius-xl: 20px;
+
+  --tl-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --tl-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --tl-font-sans: 'Be Vietnam Pro', 'Noto Sans', Arial, sans-serif;
+}

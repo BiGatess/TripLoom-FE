@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1200" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B4F4A"/>
+      <stop offset="55%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#1E6091"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="380" x2="0" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#115E59"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.78" cy="0.26" r="0.32">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#F59E0B" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#sky)"/>
+  <circle cx="930" cy="155" r="190" fill="url(#sun)"/>
+  <circle cx="930" cy="155" r="46" fill="#FEF3C7" opacity="0.9"/>
+  <!-- Far mountains (Son Tra / Ngu Hanh Son silhouette) -->
+  <path d="M0 390 Q180 260 360 350 T720 310 T1060 360 L1200 330 L1200 420 L0 420 Z" fill="#0D5C56" opacity="0.7"/>
+  <path d="M0 410 Q240 310 470 385 T920 340 L1200 390 L1200 440 L0 440 Z" fill="#0B3B38"/>
+  <!-- River / Bay -->
+  <rect y="400" width="1200" height="200" fill="url(#water)"/>
+  <!-- Golden Bridge / Dragon Bridge inspired arch -->
+  <path d="M620 400 Q820 325 1040 400" stroke="#FBBF24" stroke-width="7" fill="none" opacity="0.85"/>
+  <line x1="700" y1="373" x2="700" y2="400" stroke="#FDE68A" stroke-width="3" opacity="0.7"/>
+  <line x1="780" y1="358" x2="780" y2="400" stroke="#FDE68A" stroke-width="3" opacity="0.7"/>
+  <line x1="860" y1="358" x2="860" y2="400" stroke="#FDE68A" stroke-width="3" opacity="0.7"/>
+  <line x1="940" y1="373" x2="940" y2="400" stroke="#FDE68A" stroke-width="3" opacity="0.7"/>
+  <!-- Hoi An Lantern glow reflections -->
+  <ellipse cx="830" cy="455" rx="140" ry="8" fill="#FDE68A" opacity="0.22"/>
+  <ellipse cx="920" cy="495" rx="110" ry="6" fill="#E6F5F2" opacity="0.18"/>
+  <!-- Traditional Boat -->
+  <path d="M770 475 Q830 495 895 475 L880 490 Q830 502 785 490 Z" fill="#0F172A"/>
+  <circle cx="882" cy="466" r="7" fill="#F59E0B"/>
+  <circle cx="882" cy="466" r="14" fill="#FDE68A" opacity="0.3"/>
+</svg>

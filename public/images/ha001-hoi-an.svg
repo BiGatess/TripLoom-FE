@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="60%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#134E4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <!-- Ancient yellow shophouses -->
+  <rect x="60" y="190" width="210" height="170" rx="4" fill="#FDE68A"/>
+  <path d="M48 195 L165 135 L282 195 Z" fill="#92400E"/>
+  <rect x="290" y="170" width="230" height="190" rx="4" fill="#FCD34D"/>
+  <path d="M278 175 L405 112 L532 175 Z" fill="#78350F"/>
+  <rect x="540" y="200" width="200" height="160" rx="4" fill="#FDE68A"/>
+  <path d="M528 205 L640 148 L752 205 Z" fill="#92400E"/>
+  <!-- Wooden windows -->
+  <rect x="105" y="225" width="44" height="56" rx="3" fill="#78350F"/>
+  <rect x="180" y="225" width="44" height="56" rx="3" fill="#78350F"/>
+  <rect x="335" y="210" width="52" height="62" rx="3" fill="#78350F"/>
+  <rect x="425" y="210" width="52" height="62" rx="3" fill="#78350F"/>
+  <rect x="585" y="235" width="46" height="52" rx="3" fill="#78350F"/>
+  <rect x="660" y="235" width="46" height="52" rx="3" fill="#78350F"/>
+  <!-- Glowing Lanterns -->
+  <line x1="60" y1="190" x2="740" y2="190" stroke="#0F172A" stroke-width="2" opacity="0.4"/>
+  <ellipse cx="140" cy="212" rx="14" ry="18" fill="#EF4444"/>
+  <ellipse cx="260" cy="208" rx="14" ry="18" fill="#F59E0B"/>
+  <ellipse cx="405" cy="202" rx="16" ry="20" fill="#DC2626"/>
+  <ellipse cx="530" cy="210" rx="14" ry="18" fill="#10B981"/>
+  <ellipse cx="660" cy="214" rx="14" ry="18" fill="#F59E0B"/>
+  <!-- Hoai River -->
+  <rect y="360" width="800" height="140" fill="#0F172A" opacity="0.82"/>
+  <ellipse cx="140" cy="410" rx="28" ry="6" fill="#EF4444" opacity="0.4"/>
+  <ellipse cx="405" cy="425" rx="40" ry="7" fill="#F59E0B" opacity="0.45"/>
+  <ellipse cx="660" cy="408" rx="30" ry="6" fill="#FDE68A" opacity="0.4"/>
+</svg>

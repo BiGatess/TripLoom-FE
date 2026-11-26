@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#E6F5F2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="170" cy="110" r="40" fill="#FEF3C7"/>
+  <!-- Marble limestone peaks -->
+  <path d="M40 430 L175 185 L310 430 Z" fill="#475569"/>
+  <path d="M220 430 L395 125 L575 430 Z" fill="#334155"/>
+  <path d="M460 430 L625 205 L780 430 Z" fill="#475569"/>
+  <!-- Lush green foliage on slopes -->
+  <path d="M120 430 Q210 310 315 390 T520 350 T740 430 Z" fill="#0F766E"/>
+  <!-- Pagoda silhouette on peak -->
+  <rect x="378" y="102" width="34" height="24" fill="#92400E"/>
+  <path d="M366 105 L395 82 L424 105 Z" fill="#B45309"/>
+  <!-- Stone steps -->
+  <path d="M365 430 L392 315 L418 315 L450 430 Z" fill="#CBD5E1"/>
+  <rect y="425" width="800" height="75" fill="#115E59"/>
+</svg>

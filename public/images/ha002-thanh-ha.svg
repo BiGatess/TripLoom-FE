@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#FEF3C7"/>
+  <rect y="340" width="800" height="160" fill="#92400E" opacity="0.22"/>
+  <!-- Terracotta pottery pieces -->
+  <ellipse cx="230" cy="355" rx="80" ry="22" fill="#92400E" opacity="0.25"/>
+  <path d="M175 350 Q155 265 200 205 L260 205 Q305 265 285 350 Z" fill="#C2410C"/>
+  <rect x="195" y="182" width="70" height="24" rx="8" fill="#EA580C"/>
+  <ellipse cx="445" cy="365" rx="105" ry="26" fill="#92400E" opacity="0.25"/>
+  <path d="M365 360 Q335 250 405 165 L485 165 Q555 250 525 360 Z" fill="#B45309"/>
+  <rect x="398" y="138" width="94" height="30" rx="10" fill="#D97706"/>
+  <path d="M590 355 Q575 295 610 250 L660 250 Q695 295 680 355 Z" fill="#0F766E"/>
+  <rect x="605" y="232" width="60" height="20" rx="6" fill="#115E59"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="250" x2="0" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="270" fill="url(#sky)"/>
+  <circle cx="640" cy="105" r="44" fill="#FEF3C7"/>
+  <!-- Distant Son Tra headland -->
+  <path d="M0 265 Q160 185 330 245 L420 265 Z" fill="#115E59" opacity="0.75"/>
+  <!-- Ocean -->
+  <rect y="260" width="800" height="140" fill="url(#sea)"/>
+  <!-- Foam waves -->
+  <path d="M0 365 Q180 345 380 370 T800 355 L800 400 L0 400 Z" fill="#E6F5F2" opacity="0.75"/>
+  <!-- Golden white sand beach -->
+  <path d="M0 385 Q260 365 540 392 T800 378 L800 500 L0 500 Z" fill="#FEF3C7"/>
+  <!-- Palm tree -->
+  <path d="M120 490 Q135 370 165 250" stroke="#78350F" stroke-width="14" stroke-linecap="round"/>
+  <path d="M165 250 Q110 220 70 250" stroke="#166534" stroke-width="10" stroke-linecap="round"/>
+  <path d="M165 250 Q180 190 235 205" stroke="#166534" stroke-width="10" stroke-linecap="round"/>
+  <path d="M165 250 Q220 235 255 275" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M165 250 Q115 260 85 298" stroke="#0F766E" stroke-width="9" stroke-linecap="round"/>
+</svg>
